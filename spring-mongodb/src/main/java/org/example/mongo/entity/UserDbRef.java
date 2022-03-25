@@ -4,11 +4,10 @@ import java.math.BigDecimal;
 import java.util.List;
 
 import org.bson.types.ObjectId;
-import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection="users")
-public class User {
+public class UserDbRef {
 	
 	private ObjectId id;
 		
@@ -26,11 +25,7 @@ public class User {
 	
 	private float lenght;
 	
-//	private Comments comments;
-	
-	@DBRef
 	private List<Comment> comments;
-	
 	
 	public String getUsername() {
 		return username;
@@ -86,16 +81,7 @@ public class User {
 	public void setComments(List<Comment> comments) {
 		this.comments = comments;
 	}
-	@Override
-	public String toString() {
-		return "User [id=" + id + ", username=" + username + ", country="
-				+ country + ", address=" + address + ", favorites=" + favorites
-				+ ", age=" + age + ", salary=" + salary + ", lenght=" + lenght
-				+ ", comments=" + comments + "]";
-	}
 
-	
-	
 	
 	
 }
