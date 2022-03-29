@@ -73,11 +73,11 @@ public class SynClzAndInst {
         SynClzAndInst synClzAndInst = new SynClzAndInst();
         Thread t1 = new Thread(new InstanceSyn(synClzAndInst));
 
-        //SynClzAndInst synClzAndInst2 = new SynClzAndInst();
-        //Thread t2 = new Thread(new Instance2Syn(synClzAndInst));
+        SynClzAndInst synClzAndInst2 = new SynClzAndInst();
+        Thread t2 = new Thread(new Instance2Syn(synClzAndInst));
 
         t1.start();
-        //t2.start();
+        t2.start();
 
         SynClass synClass = new SynClass();
         synClass.start();

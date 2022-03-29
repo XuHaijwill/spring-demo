@@ -1,6 +1,6 @@
 package com.xhjc.java.base.concurrent.ch1;
 
-import xhjc.java.base.concurrent.tools.SleepTools;
+import com.xhjc.java.base.concurrent.tools.SleepTools;
 
 public class StartAndRun {
 
