@@ -1,5 +1,7 @@
 package org.example.spring.base.cap9;
 
+import org.example.spring.base.cap9.bean.Moon;
+import org.example.spring.base.cap9.bean.Sun;
 import org.example.spring.base.cap9.config.Cap9MainConfig;
 import org.example.spring.base.cap9.dao.TestDao;
 import org.example.spring.base.cap9.service.TestService;
@@ -22,10 +24,19 @@ public class Cap9MainTest {
         System.out.println(testDao);
 
         app.close();
+    }
 
+    @Test
+    public void test02(){
+        AnnotationConfigApplicationContext app = new AnnotationConfigApplicationContext(Cap9MainConfig.class);
+        System.out.println(app);
 
+		Moon moon = (Moon)app.getBean(Moon.class);
+		System.out.println(moon);
 
+		Sun sun = (Sun)app.getBean(Sun.class);
+		System.out.println(sun.getMoon());
 
-
+        app.close();
     }
 }
