@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Primary;
 
 
 @Configuration
-@ComponentScan({"org.example.spring.base.cap9.controller","org.example.spring.base.cap9.service","org.example.spring.base.cap9.dao"})
+@ComponentScan({"org.example.spring.base.cap9.bean","org.example.spring.base.cap9.controller","org.example.spring.base.cap9.service","org.example.spring.base.cap9.dao"})
 public class Cap9MainConfig {
 	//spring进行自装配的时候默认首选的bean
 	//@Primary

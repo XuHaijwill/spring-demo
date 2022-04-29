@@ -34,11 +34,11 @@ public class LogAspects {
 		System.out.println("运行异常......异常信息是:{}");
 	}
 	
-//	@Around("pointCut()")
-//	public Object Around(ProceedingJoinPoint proceedingJoinPoint) throws Throwable{
-//		System.out.println("@Arount:执行目标方法之前...");
-//		Object obj = proceedingJoinPoint.proceed();//相当于开始调div地
-//		System.out.println("@Arount:执行目标方法之后...");
-//		return obj;
-//	}
+	@Around("pointCut()")
+	public Object Around(ProceedingJoinPoint proceedingJoinPoint) throws Throwable{
+		System.out.println("@Arount:执行目标方法之前...");
+		Object obj = proceedingJoinPoint.proceed();//相当于开始调div地
+		System.out.println("@Arount:执行目标方法之后...");
+		return obj;
+	}
 }
