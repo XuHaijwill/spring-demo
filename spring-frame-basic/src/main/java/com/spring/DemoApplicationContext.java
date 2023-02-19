@@ -110,7 +110,7 @@ public class DemoApplicationContext {
         if (configClass.isAnnotationPresent(ComponentScan.class)) {
             ComponentScan componentScanAnnotation = (ComponentScan) configClass.getAnnotation(ComponentScan.class);
             String path = componentScanAnnotation.value();
-            path = path.replace(".", "/");  //     com/zhouyu/service
+            path = path.replace(".", "/");  //     com/demo/service
 
             ClassLoader classLoader = DemoApplicationContext.class.getClassLoader();
             URL resource = classLoader.getResource(path);
