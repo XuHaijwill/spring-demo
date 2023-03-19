@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shardingjdbc.mapper.TOrderMapper">
+  <resultMap id="BaseResultMap" type="com.shardingjdbc.model.TOrder">
+    <id column="id" jdbcType="INTEGER" property="id"/>
+    <result column="user_id" jdbcType="INTEGER" property="userId"/>
+    <result column="order_id" jdbcType="INTEGER" property="orderId"/>
+    <result column="cloumn" jdbcType="VARCHAR" property="cloumn"/>
+    <result column="day_date" jdbcType="CHAR" property="dayDate"/>
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, user_id, order_id, cloumn, day_date
+  </sql>
+
+  <insert id="insert" parameterType="com.shardingjdbc.model.TOrder">
+    insert into t_order (user_id, order_id, cloumn, day_date) value (#{userId}, #{orderId}, #{cloumn}, #{dayDate})
+  </insert>
+
+  <select id="getList" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"/>
+    from t_order
+  </select>
+
+  <delete id="delete" parameterType="java.lang.Long">
+    delete from t_order
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+
+  <update id="update" parameterType="com.shardingjdbc.model.TOrder">
+    update t_order
+    set
+      cloumn = #{cloumn,jdbcType=VARCHAR},
+      order_id = #{orderId,jdbcType=INTEGER},
+      user_id = #{userId,jdbcType=INTEGER}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

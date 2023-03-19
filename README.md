@@ -5,3 +5,6 @@
 
 ## spring-base
 阅读Spring源码使用
+
+## sharding jdbc
+https://juejin.cn/post/6978680850737004551
