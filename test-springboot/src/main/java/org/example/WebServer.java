@@ -1,6 +1,8 @@
 package org.example;
 
+import org.springframework.web.context.WebApplicationContext;
+
 public interface WebServer {
 
-    public void start();
+     void start(WebApplicationContext applicationContext);
 }

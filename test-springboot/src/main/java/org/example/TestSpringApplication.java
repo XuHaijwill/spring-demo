@@ -16,8 +16,7 @@ public class TestSpringApplication {
         applicationContext.refresh();
 
         WebServer webServer = getWebServer(applicationContext);
-        webServer.start();
-
+        webServer.start(applicationContext);
     }
 
     public static WebServer getWebServer(WebApplicationContext applicationContext){

@@ -11,11 +11,13 @@ import org.springframework.web.servlet.DispatcherServlet;
 
 public class TomcatWebServer implements WebServer{
     @Override
-    public void start() {
+    public void start(WebApplicationContext applicationContext) {
         System.out.println("启动Tomcat");
+        startTomcat(applicationContext);
     }
 
-    public static void startTomcat(WebApplicationContext applicationContext){
+    public void startTomcat(WebApplicationContext applicationContext){
+
         Tomcat tomcat = new Tomcat();
 
         Server server = tomcat.getServer();
