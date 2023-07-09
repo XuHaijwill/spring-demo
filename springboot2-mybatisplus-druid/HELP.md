@@ -60,3 +60,8 @@ Accept: application/json
 
 ##### 使用 swagger
 <a href="http://localhost:8080/ssm/swagger-ui.html" target="_blank">http://localhost:8080/ssm/swagger-ui.html</a>
+
+### 日志
+* [Spring Boot 2.x 集成 SLF4j + log4j2 日志框架](https://blog.csdn.net/wangmx1993328/article/details/117634140)
+* [log4j2配置Mybatis的SQL打印、日志文件保存路径、日志信息保存数据库和日志信息发送邮件（超详细）](https://blog.csdn.net/weixin_36872950/article/details/91333687)
+* [springboot配置log4j2输出mybatis的sql语句日志记录，包括控制台输出sql语句](https://blog.csdn.net/qq_41741884/article/details/103012745)

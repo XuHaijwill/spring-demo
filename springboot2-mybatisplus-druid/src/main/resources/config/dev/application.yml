@@ -39,5 +39,10 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver  #mysql驱动
     username: root  #数据用户名（替换成自己当前环境的）
     password: root  #数据库密码（替换成自己当前环境的）
-    filters: log4j,wall,mergeStat #properties文件不用这个，但yml文件必须加上，不然druid不会监控sql
+    filters: log4j2,wall,mergeStat #properties文件不用这个，但yml文件必须加上，不然druid不会监控sql
+
+logging:
+  config: classpath:log4j2.xml
+  level:
+    com.seawaterbt.ssm.mapper: DEBUG
 
