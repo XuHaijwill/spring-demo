@@ -20,6 +20,8 @@ import java.util.List;
 
 import javax.annotation.Resource;
 
+import org.example.mongo.entity.Comment;
+import org.example.mongo.entity.User;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -38,8 +40,7 @@ import org.springframework.data.mongodb.core.query.Update.PushOperatorBuilder;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.enjoylearning.mongo.entity.Comment;
-import com.enjoylearning.mongo.entity.User;
+
 import com.mongodb.WriteResult;
 
 @RunWith(SpringJUnit4ClassRunner.class)

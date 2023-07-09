@@ -1,39 +1,24 @@
 package org.example.mongo;
 
 
-import static org.springframework.data.mongodb.core.query.Criteria.where;
-import static org.springframework.data.mongodb.core.query.Query.query;
-import static org.springframework.data.mongodb.core.query.Update.update;
-
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
 import java.util.UUID;
 
 import javax.annotation.Resource;
 
-import org.bson.types.ObjectId;
+
+import org.example.mongo.entity.Order;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.data.domain.Sort;
-import org.springframework.data.domain.Sort.Direction;
-import org.springframework.data.mongodb.core.FindAndModifyOptions;
 import org.springframework.data.mongodb.core.MongoOperations;
-import org.springframework.data.mongodb.core.query.Criteria;
-import org.springframework.data.mongodb.core.query.Query;
-import org.springframework.data.mongodb.core.query.Update;
-import org.springframework.data.mongodb.core.query.Update.PushOperatorBuilder;
+
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.enjoylearning.mongo.entity.Comment;
-import com.enjoylearning.mongo.entity.MyOrder;
-import com.enjoylearning.mongo.entity.Order;
-import com.enjoylearning.mongo.entity.User;
-import com.mongodb.WriteResult;
 
 
 @RunWith(SpringJUnit4ClassRunner.class)

@@ -5,15 +5,12 @@ import static org.springframework.data.mongodb.core.query.Criteria.where;
 import static org.springframework.data.mongodb.core.query.Query.query;
 import static org.springframework.data.mongodb.core.query.Update.update;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Random;
-import java.util.UUID;
-
 import javax.annotation.Resource;
 
 import org.bson.types.ObjectId;
+import org.example.mongo.entity.Comment;
+import org.example.mongo.entity.MyOrder;
+import org.example.mongo.entity.User;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -29,10 +26,6 @@ import org.springframework.data.mongodb.core.query.Update.PushOperatorBuilder;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.enjoylearning.mongo.entity.Comment;
-import com.enjoylearning.mongo.entity.MyOrder;
-import com.enjoylearning.mongo.entity.Order;
-import com.enjoylearning.mongo.entity.User;
 import com.mongodb.WriteResult;
 
 
@@ -106,7 +99,7 @@ public class SpringUpdateObjArray {
 		pob.sort(new Sort(new Sort.Order(Direction.DESC, "author")));
 		
 		System.out.println("---------------");
-		WriteResult updateFirst = tempelate.updateFirst(query, update,User.class);
+		WriteResult updateFirst = tempelate.updateFirst(query, update, User.class);
 		System.out.println(updateFirst.getN());   
     }
  
