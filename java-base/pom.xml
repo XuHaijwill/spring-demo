@@ -42,6 +42,19 @@
             <version>2.1.4</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.jdom/jdom2 -->
+        <dependency>
+            <groupId>org.jdom</groupId>
+            <artifactId>jdom2</artifactId>
+            <version>2.0.6.1</version>
+        </dependency>
+
+        <!--https://blog.csdn.net/Melo_FengZhi/article/details/107069313-->
+        <dependency>
+            <groupId>jaxen</groupId>
+            <artifactId>jaxen</artifactId>
+            <version>1.2.0</version>
+        </dependency>
 
     </dependencies>
 

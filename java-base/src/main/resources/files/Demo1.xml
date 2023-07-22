@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Data>
+    <Base>
+        <Name>若曦</Name>
+        <Age>25</Age>
+        <Height>62</Height>
+        <Weight>170</Weight>
+    </Base>
+    <Input>
+        <School>
+            <Profession>
+                <Class>
+                    <Ranking>60</Ranking>
+                    <Course>
+                        <CourseName>数据结构</CourseName>
+                        <CourseName>JavaWeb</CourseName>
+                        <CourseName>算法基础</CourseName>
+                        <CourseName>编译原理</CourseName>
+                    </Course>
+                </Class>
+                <Class>
+                    <Ranking>80</Ranking>
+                    <Course>
+                        <CourseName>数据结构</CourseName>
+                        <CourseName>JavaWeb</CourseName>
+                        <CourseName>算法基础</CourseName>
+                        <CourseName>编译原理</CourseName>
+                    </Course>
+                </Class>
+            </Profession>
+        </School>
+        <School>
+            <Profession>
+                <Class>
+                    <Ranking>30</Ranking>
+                    <Course>
+                        <CourseName>自然语言处理</CourseName>
+                        <CourseName>机器学习</CourseName>
+                        <CourseName>大数据与云计算</CourseName>
+                    </Course>
+                </Class>
+            </Profession>
+        </School>
+    </Input>
+</Data>
