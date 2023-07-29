@@ -13,7 +13,12 @@ public class SendMessageController {
 
 	@Autowired
 	private Source source;
-	
+
+	/**
+	 * http://localhost:8080/send?message=123
+	 * @param message
+	 * @return
+	 */
 	@GetMapping("/send")
 	public Object send(String message) {
 //		MessageBuilder<String> messageBuilder = MessageBuilder.withPayload(message);
@@ -21,7 +26,11 @@ public class SendMessageController {
 		source.output().send(messageBuilder.build());
 		return "message sended : "+message;
 	}
-	
+
+	/**
+	 * http://localhost:8080/sendBatch
+	 * @return
+	 */
 	@GetMapping("/sendBatch")
 	public Object sendbatch() {
 		for(int i = 0 ; i < 10 ; i ++) {
