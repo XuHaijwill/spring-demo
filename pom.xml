@@ -13,6 +13,7 @@
         <module>test-use-springboot</module>
 
         <module>springboot2-rabbitmq</module>
+        <module>springcloud-stream-rabbit</module>
     </modules>
 
     <properties>
