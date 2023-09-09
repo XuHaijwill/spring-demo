@@ -1,19 +1,24 @@
 package com.xhjc.java.sync;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 
-public class SyncDemo {
+@Slf4j
+public class SyncDemo2 {
 
-    private final static Logger logger = LoggerFactory.getLogger(SyncDemo.class);
     private static int counter = 0;
 
+    private static String lock = "";
+
     public static void increment() {
-        counter++;
+        synchronized (lock){
+            counter++;
+        }
     }
 
     public static void decrement() {
-        counter--;
+        synchronized (lock) {
+            counter--;
+        }
     }
 
     public static void main(String[] args) throws InterruptedException {
@@ -33,6 +38,7 @@ public class SyncDemo {
         t2.join();
 
         //思考： counter=？
-        logger.info("{}", counter);
+        log.info("counter={}", counter);
     }
 }
+
