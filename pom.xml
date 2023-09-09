@@ -9,11 +9,14 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
+        <module>java-base</module>
+
         <module>test-springboot</module>
         <module>test-use-springboot</module>
 
         <module>springboot2-rabbitmq</module>
         <module>springcloud-stream-rabbit</module>
+
     </modules>
 
     <properties>
