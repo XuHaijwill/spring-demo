@@ -16,6 +16,7 @@
 
         <module>springboot2-rabbitmq</module>
         <module>springcloud-stream-rabbit</module>
+        <module>SpringBootBase</module>
 
     </modules>
 
